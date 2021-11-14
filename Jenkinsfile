@@ -5,8 +5,6 @@ pipeline {
         pollSCM('* * * * *')
     }
     // Got permission denied while trying to connect to the Docker daemon socket at unix.
-  sudo usermod -a -G docker jenkins
-  sudo service jenkins restart
 
 
     stages {
