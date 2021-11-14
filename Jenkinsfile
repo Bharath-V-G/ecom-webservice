@@ -1,7 +1,6 @@
 pipeline {
     agent any 
-sudo usermod -a -G root jenkins
-sudo service jenkins restart
+
     triggers {
         pollSCM('* * * * *')
     }
@@ -11,7 +10,8 @@ sudo service jenkins restart
    //  sudo usermod -a -G docker $USER
 
     stages {
-        
+        sudo usermod -a -G root jenkins
+sudo service jenkins restart
         stage('Maven Compile') {
             steps {
                 echo '----------------- This is a compile phase ----------'
