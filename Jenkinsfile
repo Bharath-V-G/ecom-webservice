@@ -9,7 +9,7 @@ sudo service jenkins restart
     // sudo usermod -a -G docker jenkins
     // sudo service jenkins restart
    //  sudo usermod -a -G docker $USER
-   sudo chmod 777 /var/run/docker.sock
+
     stages {
         
         stage('Maven Compile') {
