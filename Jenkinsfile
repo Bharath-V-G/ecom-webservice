@@ -5,13 +5,12 @@ pipeline {
         pollSCM('* * * * *')
     }
     // Got permission denied while trying to connect to the Docker daemon socket at unix.
-    // sudo usermod -a -G docker jenkins
-    // sudo service jenkins restart
-   //  sudo usermod -a -G docker $USER
+  sudo usermod -a -G docker jenkins
+  sudo service jenkins restart
+
 
     stages {
-        sudo usermod -a -G root jenkins
-sudo service jenkins restart
+
         stage('Maven Compile') {
             steps {
                 echo '----------------- This is a compile phase ----------'
