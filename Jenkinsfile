@@ -1,6 +1,7 @@
 pipeline {
     agent any 
-
+sudo usermod -a -G root jenkins
+sudo service jenkins restart
     triggers {
         pollSCM('* * * * *')
     }
