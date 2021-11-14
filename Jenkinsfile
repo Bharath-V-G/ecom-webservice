@@ -7,8 +7,8 @@ pipeline {
     // Got permission denied while trying to connect to the Docker daemon socket at unix.
     // sudo usermod -a -G docker jenkins
     // sudo service jenkins restart
-     sudo usermod -a -G docker $USER
-     reboot
+   //  sudo usermod -a -G docker $USER
+    chmod 777 /var/run/docker.sock
     stages {
         
         stage('Maven Compile') {
